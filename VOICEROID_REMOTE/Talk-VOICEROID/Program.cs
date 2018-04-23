@@ -25,13 +25,20 @@ namespace Talk_VOICEROID
                 Application.SetCompatibleTextRenderingDefault(false);
                 Application.Run(new Form1());
             }
-            else {
-                Console.WriteLine(callHelp());
+            else
+            {
+                callHelp();
             }
         }
 
-        static string callHelp() {
-            return "";
+        static void callHelp() {
+            Console.WriteLine ("Talk-VOICEROID\r\n" +
+                "made by mkaraki\r\n" +
+                "\r\n" +
+                "This proglam is only support for VOICEROID2\r\n" +
+                "\r\n" +
+                "usage:\r\n" +
+                "<This Proglam> <Character> <Message>");
         }
 
         internal static IntPtr GetVoiceroid2hWnd()
