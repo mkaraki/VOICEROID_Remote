@@ -91,8 +91,7 @@ namespace Talk_VOICEROID
             InvokePattern elem2 = buttons[4].GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
             elem2.Invoke();
 
-            InvokePattern elem3 = buttons[9].GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
-            //elem3.Invoke();
+            object playing = buttons[9].GetCurrentPropertyValue(AutomationElement.IsEnabledProperty);
         }
     }
 }
