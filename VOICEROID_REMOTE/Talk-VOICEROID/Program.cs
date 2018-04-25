@@ -78,6 +78,7 @@ namespace Talk_VOICEROID
             AutomationElement ae = AutomationElement.FromHandle(hWnd);
             TreeScope ts1 = TreeScope.Descendants | TreeScope.Element;
             TreeScope ts2 = TreeScope.Descendants;
+            TreeScope ts3 = TreeScope.Descendants;
 
             AutomationElement editorWindow = ae.FindFirst(ts1, new PropertyCondition(AutomationElement.ClassNameProperty, "Window"));
 
@@ -91,12 +92,15 @@ namespace Talk_VOICEROID
             InvokePattern elem2 = buttons[4].GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
             elem2.Invoke();
 
-            bool played = false;
-            while (playing == false){
-                System.Threading.Thread(10)
-                playing = (bool) buttons[9].GetCurrentPropertyValue(AutomationElement.IsEnabledProperty);
+            AutomationElementCollection buttons2 = customC.FindAll(ts3, new PropertyCondition(AutomationElement.LocalizedControlTypeProperty, "ボタン"));
+
+            while (true)
+            {
+                if ((bool)buttons2[9].GetCurrentPropertyValue(AutomationElement.IsEnabledProperty)) {
+                    break;
+                }
             }
-            
+            Console.WriteLine("Sucsess");
         }
     }
 }

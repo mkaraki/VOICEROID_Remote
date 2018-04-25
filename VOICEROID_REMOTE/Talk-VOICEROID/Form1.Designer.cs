@@ -39,7 +39,7 @@
             // 
             this.button1.Location = new System.Drawing.Point(713, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 291);
             this.button1.TabIndex = 0;
             this.button1.Text = "Talk This";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,8 +48,9 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(215, 24);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(492, 19);
+            this.textBox1.Size = new System.Drawing.Size(492, 289);
             this.textBox1.TabIndex = 1;
             // 
             // label1
@@ -85,7 +86,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 55);
+            this.ClientSize = new System.Drawing.Size(800, 325);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

@@ -25,7 +25,9 @@ namespace Talk_VOICEROID
         private void button1_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "" || textBox1.Text == "") { MessageBox.Show("No Message!"); return; }
-            Program.talk(comboBox1.Text,textBox1.Text);
+            string chara = comboBox1.Text;
+            string text = textBox1.Text;
+            Task.Run(() => Program.talk(chara,text));
         }
     }
 }
